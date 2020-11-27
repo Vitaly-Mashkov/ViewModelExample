@@ -12,6 +12,6 @@ class MainActivity : AppCompatActivity() {
 
         val model = ViewModelProvider(this).get(DataViewModel::class.java)
         val data = model.getData()
-        data.observe(this, { t -> textView.text = t })
+        data.observe(this){ textView.text = it }
     }
 }
